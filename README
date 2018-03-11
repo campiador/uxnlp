@@ -1,1 +1,7 @@
+COPYRIGHT 2018 by Behnam Heydarshahi and Ge Gao for Tufts COMP 150 NLP
+
+Purpose:
+        This project aims to read user feedbacks on Netflix app, and find out what UX dimensions are they complaining about the most.
+
+
 Need to fix the crawl function for review count
