@@ -1,0 +1,57 @@
+<?php
+function myTest() {
+    static $x = 0;
+    echo $x;
+    $x++;
+}
+
+myTest();
+myTest();
+myTest();
+
+echo "\n";
+
+$netflix_address = "https://play.google.com/store/apps/details?id=com.netflix.mediaclient&hl=en";
+
+
+function getHtml($url) {
+	 $session = curl_init();
+	 curl_setopt($session, CURLOPT_URL, $url);
+	 curl_setopt($session, CURLOPT_RETURNTRANSFER, 1);
+	 curl_setopt($session, CURLOPT_CONNECTTIMEOUT, 5);	
+	 $html = curl_exec($session);
+	 curl_close($session);
+	 return $html;
+}
+
+
+function getAndroidRating($html) {
+	 if (preg_match('/<div class="score".*>(\d\.\d)<\/div>/', $html, $matches)) {
+	    return $matches[1];
+	    } if (preg_match('/<div class="score">(\d)\,(\d)<\/div>/', $html, $matches)) {
+ 	      return $matches[1] . "." . $matches[2];
+	      } return "Not found!";
+}
+
+function getAndroidNoOfReviews($html) {
+	 if (preg_match('/<span class="reviews\-num">(\d+)<\/span>/', $html, $matches)) {
+ 	    return $matches[1];
+ 	    } return "Not found!";
+}
+
+
+$netflix_html = getHtml($netflix_address);
+
+$rating = getAndroidRating($netflix_html);
+
+
+$num_reviews = getAndroidNoOfReviews($netflix_html);
+
+#echo $netflix_html;
+
+echo $num_reviews;
+echo "\n";
+
+echo $rating;
+
+?>
