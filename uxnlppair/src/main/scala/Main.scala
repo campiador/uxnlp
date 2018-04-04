@@ -8,4 +8,12 @@ object Main extends App {
   TopicModel.greetFromTopicModel()
 
 
+  var matrix = TopicModel.term_by_document_matrix(List("The dog chewed my shoes", 
+                                                       "The cat scratched my chair",
+                                                       "the mouse chewed my cereal"))
+
+  if (matrix.)
+
+  println(matrix)
+
 }

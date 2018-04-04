@@ -1,0 +1,4 @@
+[0m[[0m[31merror[0m] [0m[0m/Users/Harry/Desktop/NLP/pairwork/uxnlp/uxnlppair/src/main/scala/TopicModel.scala:43:32: not found: value terms[0m
+[0m[[0m[31merror[0m] [0m[0m        println("allTerms: " + terms.allTerms.mkString(" "))[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
