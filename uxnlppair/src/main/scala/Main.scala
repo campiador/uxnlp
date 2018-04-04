@@ -12,7 +12,6 @@ object Main extends App {
                                                        "The cat scratched my chair",
                                                        "the mouse chewed my cereal"))
 
-  if (matrix.)
 
   println(matrix)
 
